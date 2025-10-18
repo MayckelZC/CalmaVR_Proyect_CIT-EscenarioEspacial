@@ -10,9 +10,8 @@ Material:
   m_Name: Verde
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_Parent: {fileID: 2100000, guid: 84c184e958f30ea4c96aba97db5d70af, type: 2}
-  m_ModifiedSerializedProperties: 16
-  m_ValidKeywords:
-  - _SPECULAR_SETUP
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -26,13 +25,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs: []
     m_Ints: []
-    m_Floats:
-    - _DstBlend: 0
-    - _DstBlendAlpha: 0
-    - _ReceiveShadows: 1
-    - _Surface: 0
-    - _WorkflowMode: 0
-    - _ZWrite: 1
+    m_Floats: []
     m_Colors: []
   m_BuildTextureStacks: []
 --- !u!114 &3323264103938246452
