@@ -21,10 +21,12 @@ public class fadeCamara : MonoBehaviour
     private int direction = 0;
     private float time = 0f;
     private GameObject musicaEscenario; 
+    
 
     // Start is called before the first frame update
     void Start()
     {
+
         musica = GameObject.Find("Ambient_Music_Player").GetComponent<AudioSource>();
         if (startFadeOut) alpha = 1f; else alpha = 0f;
         texture = new Texture2D(1, 1);
@@ -56,7 +58,6 @@ public class fadeCamara : MonoBehaviour
         if (timeEvent > 0)
         {
             timeEvent -= Time.deltaTime;
-            print(timeEvent);
 
             if (timeEvent <= 0)
             {
@@ -68,7 +69,6 @@ public class fadeCamara : MonoBehaviour
         if (flagEventMusicaEscenario)
         {
             musica.Play();
-            print("Musicaaaaaaa");
             flagEventMusicaEscenario = false;
         }
     }
@@ -82,7 +82,7 @@ public class fadeCamara : MonoBehaviour
             alpha = Curve.Evaluate(time);
             texture.SetPixel(0, 0, new Color(Color.black.r, Color.black.g, Color.black.b, alpha));
             texture.Apply();
-            if (alpha <= 0f || alpha >= 1f) direction = 0; print(direction); 
+            if (alpha <= 0f || alpha >= 1f) direction = 0; 
         }
     }
 }

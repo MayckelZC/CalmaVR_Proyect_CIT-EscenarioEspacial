@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class controlCamara : MonoBehaviour
 {
-    float rotationSpeed = 45;
+    float rotationSpeed = 70;
     Vector3 currentEulerAngles;
     float x;
     float y;
@@ -26,5 +26,14 @@ public class controlCamara : MonoBehaviour
 
         //apply the change to the gameObject
         transform.eulerAngles = currentEulerAngles;
+
+        if (Input.GetKey(KeyCode.K))
+        {
+            transform.Translate(new Vector3(0, 0, -2) * Time.deltaTime);
+        } else if (Input.GetKey(KeyCode.I))
+        {
+            transform.Translate(new Vector3(0, 0, 2) * Time.deltaTime);
+        }
+        
     }
 }
